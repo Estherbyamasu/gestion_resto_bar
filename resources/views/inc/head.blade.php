@@ -7,6 +7,9 @@
 	<link href="{{ asset('css/datepicker3.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+	<link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+
+  <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
 	
 	<!--Custom Font-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">

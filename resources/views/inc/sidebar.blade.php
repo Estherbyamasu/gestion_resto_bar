@@ -5,11 +5,11 @@
 				<em class="fa fa-cog">&nbsp;</em> Liste menu<span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children collapse" id="sub-item-1">
-					<li><a class="" href="{{ url('utilisateurs')}}">
-						<span class="fa fa-user">&nbsp;</span>Utilisateurs
+					<li><a class="" href="{{ url('caissiers')}}">
+						<span class="fa fa-user">&nbsp;</span>Caissiers
 					</a></li>
 					<li><a class="" href="{{ url('clients')}}">
-						<span class="fa fa-users">&nbsp;</span> clients
+						<span class="fa fa-users">&nbsp;</span> Clients
 					</a></li>
 					<li><a class="" href="{{ url('serveurs')}}">
 						<span class="fa fa-clone">&nbsp;</span> Serveurs
