@@ -70,7 +70,25 @@ class FacturesController extends Controller
 
         return redirect('factures');
     }
+    public function search(Request $request)
+    {
 
+        $clients = Client::all();
+        $serveurs = Serveur::all();
+        $caissiers = Caissier::all();
+
+        $date_debut=$request->date_debut;
+        $date_fin=$request->date_fin;
+        $factures= Facture::wherebetween('date_facture',[$date_debut, $date_fin])
+         ->get();
+
+         return view('factures.index',compact('factures'),[
+            
+            'clients' => $clients,
+            'serveurs' => $serveurs,
+            'caissiers' => $caissiers
+        ]);
+    }
     
     public function show(Facture $facture)
     {
