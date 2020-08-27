@@ -81,6 +81,14 @@ Route::put('factures/{facture}','FacturesController@update');
 Route::post('factures/destroy/{facture}','FacturesController@destroy');
 Route::post('search','FacturesController@search');
 
+
+Route::get('detailleachats','DetailleachatsController@index');
+Route::get('detailleachats/create','DetailleachatsController@create');
+Route::post('detailleachats','DetailleachatsController@store');
+Route::get('detailleachats/edit/{detailleachat}','DetailleachatsController@edit');
+Route::put('detailleachats/{detailleachat}','DetailleachatsController@update');
+Route::post('detailleachats/destroy/{detailleachat}','DetailleachatsController@destroy');
+
 Route::get('detaillefactures','DetaillefacturesController@index');
 Route::get('detaillefactures/create','DetaillefacturesController@create');
 Route::post('detaillefactures','DetaillefacturesController@store');
