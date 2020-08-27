@@ -35,11 +35,11 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="nom_utilisateur">Nom utilisateur</label>
-                    <select name="utilisateur_id" id="" class="form-control">
-                        <option value="">Select utilisateur</option>
-                        @foreach($utilisateurs as $utilisateur)
-                        <option value="{{$utilisateur->id}}">{{$utilisateur->nom_utilisateur}}</option>
+                    <label for="nom_caissier">Nom caissier</label>
+                    <select name="caissier_id" id="" class="form-control">
+                        <option value="">Select caissier</option>
+                        @foreach($caissiers as $caissier)
+                        <option value="{{$caissier->id}}">{{$caissier->nom_caissier}}</option>
                         @endforeach
                     </select>
                 </div>
