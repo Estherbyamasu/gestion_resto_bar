@@ -15,7 +15,11 @@ class CategoriesController extends Controller
             'categories' => $categories
         ]);
     }
-
+    public function show($id)
+    {
+        $category_products = Category::with(['products'])->find($id);
+        return view('categories.show',compact('category_products'));
+    }
     public function create()
     {
         return view('categories/create');
