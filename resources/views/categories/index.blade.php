@@ -30,7 +30,7 @@
                     <div class="col-md-12">
                     <div class="row">
         <div class="col-lg-10">
-        <div class="modal-dialog modal-fluid modal-notify modal-info" role="document">
+        <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       
 
@@ -79,7 +79,7 @@
                                     <td>{{ $category->cat_name }}</td>
                                     <td>
                                         <a href="categories/edit/{{ $category->id }}" class="glyphicon glyphicon-edit   btn btn-info">edit</a>
-                                        <a href="categories/show/{{$category->id}}" class="glyphicon glyphicon-play  btn btn-primary">Voir les produits</a>
+                                        <a href="categories/show/{{$category->id}}" class="glyphicon glyphicon-play btn btn-primary" >Voir les produits</a>
                                         <form action="categories/destroy/{{ $category->id }}" method="post" class="form-inline">
                                         @csrf
                                 <button type="submit" onclick="return confirm('Voulez vs vraiment supprimer cette categorie ?')" class="glyphicon glyphicon-delite glyphicon-trash   btn btn-danger">Delete</button>

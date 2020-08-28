@@ -12,7 +12,7 @@
 						<span class="fa fa-users">&nbsp;</span> Clients
 					</a></li>
 					<li><a class="" href="{{ url('serveurs')}}">
-						<span class="fa fa-clone">&nbsp;</span> Serveurs
+						<span class="fa fa-users">&nbsp;</span> Serveurs
 					</a></li>
 					<li><a class="" href="{{ url('achats')}}">
 						<span class="fa fa-list-alt">&nbsp;</span> Achats
