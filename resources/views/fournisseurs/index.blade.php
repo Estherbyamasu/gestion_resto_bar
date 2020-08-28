@@ -11,8 +11,10 @@
             <li class="active">Fournisseurs</li>
         </ol>
     </div>
+    
+
     <!--/.row-->
-    <div class="modal-content">
+    <div class="modal-content card card-image"    >
     <div class="modal-body text-center mb-1">
       <!--Modal cascading tabs-->
 <div class="row">

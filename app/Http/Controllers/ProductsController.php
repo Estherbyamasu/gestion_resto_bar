@@ -54,12 +54,20 @@ class ProductsController extends Controller
     }
 
     
-    public function show(Product $product)
+    public function show($id)
     {
-        //
+        $product_detailleachats = Product::with(['detailleachats'])->find($id);
+        return view('products.show',compact('product_detailleachats'));
     }
 
-   
+    /*public function show1($id)
+    {
+        $product_detailleachats = Product::with(['detailleachats' =>function ($req){
+            $req->SUM('quantite','prix');
+        }])->find($id);
+        
+    return view('products.show',compact('product_detailleachats'));
+    }*/
     public function edit(Product $product)
     {
         //

@@ -10,4 +10,11 @@ class product extends Model
 {
     return $this->belongsTo('App\Category');
 } 
+
+public function detailleachats()
+    {
+        return $this->hasMany('App\Detailleachat');
+       // ->sum('quantite','prix')
+    } 
+  
 }

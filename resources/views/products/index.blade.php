@@ -110,6 +110,7 @@
                         <td>{{$product->prix}}</td>
                         <td>
                             <a href="products/edit/{{$product->id}}" class="glyphicon glyphicon-edit   btn btn-primary">Edit</a>
+                            <a href="products/show/{{$product->id}}" class="glyphicon glyphicon-play btn btn-primary" >Voir les produits</a>
                             <form action="products/destroy/{{$product->id}}" method="POST">
                             @csrf
                                 <button type="submit" onclick="return confirm('Voulez vs vraiment supprimer ce produit ?')" class="glyphicon glyphicon-delite glyphicon-trash   btn btn-danger">Delete</button>

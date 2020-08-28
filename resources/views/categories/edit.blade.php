@@ -21,7 +21,7 @@
 
     <div class="row">
         <div class="col-lg-10">
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
                 <div class="panel-heading">Modifier la categorie n&deg; {{ $category->id }}</div>
                 <div class="panel-body">
                     <div class="col-md-12">
