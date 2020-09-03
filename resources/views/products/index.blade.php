@@ -118,6 +118,14 @@
                         </td>
                     </tr>
                     @endforeach
+                    <tr>
+                        <td colspan="3" align="left"><b>Prix total</b></td>
+                        <td colspan="2" align="left">
+                        @foreach($somme as $somme)
+                        <b>{{ $somme->prix }}</b>
+                        @endforeach
+                    </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

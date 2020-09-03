@@ -25,7 +25,7 @@
       <!--Modal cascading tabs-->
       <div class="modal-body text-center mb-1">
          <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-            <h1 class="page-header">L'ajout des fournisseurs</h1>
+            <h1 class="page-header">Gestion des fournisseurs</h1>
         </ul>
             <div class="row">
         <div class="col-lg-10">

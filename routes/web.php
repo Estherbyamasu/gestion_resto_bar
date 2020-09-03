@@ -38,6 +38,8 @@ Route::put('products/{product}','ProductsController@update');
 Route::post('products/destroy/{product}','ProductsController@destroy');
 Route::post('search','ProductsController@search');
 Route::get('products/show/{product}','ProductsController@show');
+Route::get('products/show1/{product}','ProductsController@show1
+');
 
 Route::get('clients','ClientsController@index');
 Route::get('clients/create','ClientsController@create');

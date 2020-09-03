@@ -26,7 +26,7 @@
              <div class="modal-content">
 
       <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-            <h1 class="page-header">L'ajout des clients</h1>
+            <h1 class="page-header">L'ajout des detaille factures</h1>
         </ul>
              <div class="panel panel-default">
              <div class="panel-body">
@@ -35,7 +35,7 @@
             <form action="{{url('detaillefactures')}}" method="POST">
                 @csrf
                 <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                 <div class="form-group">
                     <label for="nom_produit">Nom produit</label>
                     <select name="product_id" id="" class="form-control" 
@@ -50,14 +50,16 @@
                     </select>
                 </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-8">
                 <div class="form-group">
-                    <label for="date_facture">Date facture</label>
+                    <label for="date_facture">client serveur caissier date facture</label>
                     <select name="facture_id" id="" class="form-control" 
                     class="@error('prix_unitaire') is-danger @enderror" required>
                         <option value="">Select facture</option>
                         @foreach($factures as $facture)
-                        <option value="{{$facture->id}}">{{$facture->date_facture}}</option>
+                        <option value="{{$facture->id}}"> <table class="table">
+                        <tbody> <tr> <td> {{$facture->nom_client}}</td><td> {{$facture->nom_serveur}}</td>
+                        <td> {{$facture->nom_caissier}}</td><td>{{$facture->date_facture}}</td></tr></tbody> </table> </option>
                         @endforeach
                         @error('facture_id')
                     <div class="alert alert-danger">{{$message}}</div>

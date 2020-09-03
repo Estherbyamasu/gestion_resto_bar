@@ -25,7 +25,7 @@
              <div class="modal-content">
 
       <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-            <h1 class="page-header">L'ajout des clients</h1>
+            <h1 class="page-header">Gestion des clients</h1>
         </ul>
              <div class="panel panel-default">
              <div class="panel-body">

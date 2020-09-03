@@ -16,7 +16,12 @@ class DetaillefacturesController extends Controller
     {
         //
         $products = Product::all();
-        $factures = Facture::all();
+        $factures =  $factures = DB::table('factures')
+                    ->join('clients', 'factures.client_id', '=', 'clients.id')
+                    ->join('serveurs', 'factures.serveur_id', '=', 'serveurs.id')
+                    ->join('caissiers', 'factures.caissier_id', '=', 'caissiers.id')
+                    ->select('clients.*', 'serveurs.*', 'caissiers.*','factures.*')
+                    ->get();
         
         $detaillefactures = DB::table('detaillefactures')
             ->join('products', 'detaillefactures.product_id', '=', 'products.id')

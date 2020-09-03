@@ -16,7 +16,9 @@ class DetailleachatsController extends Controller
     {
         //
         $products = Product::all();
-        $achats = Achat::all();
+        $achats =  $achats = DB::table('achats')
+                  ->join('fournisseurs', 'achats.fournisseur_id', '=', 'fournisseurs.id')
+                  ->get();
         
         $detailleachats = DB::table('detailleachats')
             ->join('products', 'detailleachats.product_id', '=', 'products.id')
@@ -24,10 +26,18 @@ class DetailleachatsController extends Controller
           
             ->select('products.*', 'achats.*', 'detailleachats.*')
             ->get();
+           
+            $somme = DB::table('detailleachats')
+                    ->select(DB::raw('sum(prix) as prix ') )
+                    ->join('products', 'detailleachats.product_id', '=', 'products.id')
+                    ->join('achats', 'detailleachats.achat_id', '=', 'achats.id')
+                    ->select('products.*', 'achats.*', 'detailleachats.*')
+                    ->get();
         return view('detailleachats/index',[
             'detailleachats' => $detailleachats,
             'products' => $products,
-            'achats' => $achats
+            'achats' => $achats,
+            'somme' => $somme
            
         ]);
     }

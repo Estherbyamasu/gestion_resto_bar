@@ -95,6 +95,14 @@
                                 
                                 </tr>
                                 @endforeach
+                                <tr>
+                                    <td colspan="2" align="left"><b>Prix total</b></td>
+                                    <td colspan="" align="left">
+                                    @foreach($somme as $somme)
+                                    <b>{{ $somme->prix }}</b>
+                                    @endforeach
+                                </td>
+                                </tr>
                             </tbody>
 
                         </table>

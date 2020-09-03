@@ -52,12 +52,12 @@
                 </div>
                 <div class="col-lg-6">
                 <div class="form-group">
-                    <label for="date_achat">Date achat</label>
+                    <label for="date_achat">Fournisseur Date achat</label>
                     <select name="achat_id" id="" class="form-control" 
                     class="@error('prix') is-danger @enderror" required>
                         <option value="">Select achat</option>
                         @foreach($achats as $achat)
-                        <option value="{{$achat->id}}">{{$achat->date_achat}}</option>
+                        <option value="{{$achat->id}}">{{$achat->nom_fournisseur}}{{$achat->date_achat}}</option>
                         @endforeach
                         @error('achat_id')
                     <div class="alert alert-danger">{{$message}}</div>
@@ -128,6 +128,14 @@
                         </td>
                     </tr>
                     @endforeach
+                    <tr>
+                                    <td colspan="4" align="left"><b>Prix total</b></td>
+                                    <td colspan="" align="center">
+                                    @foreach($somme as $somme)
+                                    <b>{{ $somme->prix }}</b>
+                                    @endforeach
+                                </td>
+                                </tr>
                 </tbody>
             </table>
         </div>

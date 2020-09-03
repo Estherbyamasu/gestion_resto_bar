@@ -11,6 +11,7 @@ class product extends Model
     return $this->belongsTo('App\Category');
 } 
 
+protected $table='products';
 public function detailleachats()
     {
         return $this->hasMany('App\Detailleachat');

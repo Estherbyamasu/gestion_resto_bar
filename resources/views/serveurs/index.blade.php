@@ -111,7 +111,7 @@
                         <td>{{$serveur->prenom_serveur}}</td>
                         <td>{{$serveur->address}}</td>
                         <td>{{$serveur->tel}}</td>
-                        <td>{{$serveur->address}}</td>
+                        
                         
                         <td>
                             <a href="serveurs/edit/{{$serveur->id}}" class="glyphicon glyphicon-edit   btn btn-primary">Edit</a>

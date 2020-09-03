@@ -20,7 +20,7 @@
 	<!--/.row-->
 
 	<div class="parallax-container ">
-		<div class=" parallax" ><img src="img/cpu.jpg " width="100%" height="650px" ></div>
+		<div class=" parallax" ><img src="img/cpu.jpg " width="100%" height="700px" ></div>
 		
 		
 		

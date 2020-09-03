@@ -17,9 +17,14 @@ class ProductsController extends Controller
         $products = DB::table('categories')
             ->join('products', 'products.category_id', '=', 'categories.id')
             ->get();
+        $somme = DB::table('categories')
+            ->select(DB::raw('sum(prix) as prix ') )
+            ->join('products', 'products.category_id', '=', 'categories.id')
+            ->get();
         return view('products/index',[
             'products' => $products,
-            'categories' => $categories
+            'categories' => $categories,
+            'somme' => $somme
         ]);
     }
 
@@ -57,17 +62,20 @@ class ProductsController extends Controller
     public function show($id)
     {
         $product_detailleachats = Product::with(['detailleachats'])->find($id);
-        return view('products.show',compact('product_detailleachats'));
+        $somme = DB::table('detailleachats')
+                    ->select(DB::raw('sum(prix) as prix ') )
+                    ->join('products', 'detailleachats.product_id', '=', 'products.id')
+                    ->join('achats', 'detailleachats.achat_id', '=', 'achats.id')
+                    ->select('products.*', 'achats.*', 'detailleachats.*')
+                    ->where('detailleachats.product_id', $id)
+                    ->get();
+        return view('products.show',compact('product_detailleachats','somme'));
     }
 
-    /*public function show1($id)
+    public function show1($id)
     {
-        $product_detailleachats = Product::with(['detailleachats' =>function ($req){
-            $req->SUM('quantite','prix');
-        }])->find($id);
-        
-    return view('products.show',compact('product_detailleachats'));
-    }*/
+        $product_detailleachats =App\Product::with('detailleachats')->GroupBy('$id')->sum('quantite');
+    }
     public function edit(Product $product)
     {
         //
